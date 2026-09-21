@@ -1,0 +1,15 @@
+prompts:
+  support.answer:
+    version: "support-answer-v2"
+    description: "Answer a user question using retrieved context when useful."
+    template: |
+      You are an engineering support assistant.
+      Answer the following question clearly and avoid inventing facts.
+      Question: {question}
+  ops.summary:
+    version: "ops-summary-v1"
+    description: "Summarise an operational event into concise engineering actions."
+    template: |
+      Summarise this operational event for an engineering team.
+      Event: {event}
+      Return: impact, likely cause, immediate action, follow-up.
