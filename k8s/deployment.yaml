@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: llmops-control-plane
+  namespace: llmops
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: llmops-control-plane
+  template:
+    metadata:
+      labels:
+        app: llmops-control-plane
+    spec:
+      containers:
+        - name: api
+          image: ghcr.io/example/llmops-control-plane:0.1.0
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef:
+                name: llmops-config
+            - secretRef:
+                name: llmops-secrets
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
