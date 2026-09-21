@@ -1,0 +1,9 @@
+models:
+  - id: deterministic-v1
+    provider: mock
+    role: ci-default
+    purpose: deterministic test/evaluation runs
+  - id: openai-compatible
+    provider: openai_compatible
+    role: runtime
+    purpose: hosted or local OpenAI-compatible inference servers
