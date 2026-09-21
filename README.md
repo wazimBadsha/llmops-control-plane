@@ -4,6 +4,9 @@ A production-minded, local-first reference implementation for building and opera
 
 This showcase combines a model gateway, versioned prompts, transparent RAG retrieval, deterministic evaluation gates, telemetry, cost/latency metrics, Docker, Kubernetes manifests, and CI.
 
+LLM Gateway → Prompt Registry → RAG → Model Provider → Evaluation Gate → Metrics → Grafana → CI/CD
+
+
 ## Why this project exists
 
 Most LLM demos stop at:
