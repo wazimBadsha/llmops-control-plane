@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: llmops-config
+  namespace: llmops
+data:
+  APP_ENV: "kubernetes"
+  LLM_PROVIDER: "mock"
+  LLM_MODEL: "deterministic-v1"
+  RETRIEVAL_TOP_K: "4"
+  MAX_CONTEXT_CHARS: "6000"
