@@ -1,0 +1,2 @@
+{"id":"rag-001","prompt_key":"support.answer","variables":{"question":"What does LLMOps turn model output into?"},"expected_keywords":["observable","testable","software artifact"],"required_phrases":["version the prompt"]}
+{"id":"rag-002","prompt_key":"support.answer","variables":{"question":"Why should retrieval be inspectable?"},"expected_keywords":["retrieval","explainability"],"required_phrases":["transparent lexical baseline"]}
